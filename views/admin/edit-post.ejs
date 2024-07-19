@@ -1,0 +1,35 @@
+<a href="/dashboard" class="button">&larr; Back</a>
+
+<div class="admin-title">
+  <h2>View / Edit Post</h2>
+</div>
+<form action="/edit-post/<%= data._id %>?_method=PUT" method="POST">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      ><b>Title</b></label
+    >
+    <input
+      type="text"
+      name="title"
+      value="<%= data.title %>"
+      class="form-control opacity-75"
+      id="exampleFormControlInput1"
+      placeholder="Post title"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      ><b>Content</b></label
+    >
+    <textarea
+      class="form-control opacity-75"
+      name="body"
+      id="exampleFormControlTextarea1"
+      cols="40"
+      rows="10"
+    >
+<%= data.body %></textarea
+    >
+  </div>
+  <input type="submit" name="" class="btn btn-dark" value="Update" />
+</form>

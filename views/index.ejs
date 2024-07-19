@@ -1,0 +1,37 @@
+<div class="author">
+  <h1 class="author__heading">Hi, I am Vishal.</h1>
+  <p class="author__body">This is a basic Blog Application</p>
+</div>
+
+<img
+  src="/images/hand.png"
+  alt="portrait"
+  class="portrait"
+  width="300"
+  height="400"
+/>
+
+<div>
+  <a href="/admin" class="button btn btn-dark">Login</a>
+</div>
+
+<section class="articles">
+  <h2 class="article__heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+    <% data.forEach(post => { %>
+
+    <li>
+      <a href="/post/<%= post._id %>">
+        <span><%= post.title %></span>
+        <span class="article-list__date"
+          ><%= post.createdAt.toDateString() %></span
+        >
+      </a>
+    </li>
+
+    <% }) %>
+  </ul>
+
+  <a href="#" class="pagination">&lt; View Older Posts</a>
+</section>

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --black: #1c1c1c;
+  --gray: #7e7e7e;
+  --gray-light: #e4e4e4;
+  --red: #b30000;
+  --fs-sm: clamp(0.8rem, 0.14vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.3vi + 0.92rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.52vi + 1.11rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 0.86vi + 1.33rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.36vi + 1.59rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.06vi + 1.89rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.07vi + 2.24rem, 5rem);
+  --border-radius: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+  color: var(--black);
+  font-size: var(--fs-base) !important;
+  background-image: url("/images/bg3.jpg");
+  background-size: cover;
+  /* margin: 0 !important; */
+}
+
+a {
+  color: var(--black);
+}
+
+h1 {
+  font-size: var(--fs-lg) !important;
+  font-weight: 600 !important;
+}
+
+img {
+  width: 80%;
+  height: auto;
+}
+
+/* Layout */
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main {
+  padding: 20px 0;
+}
+
+/* Hero section */
+.portrait {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-height: 500px;
+  filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+
+.header__list {
+  width: 100%;
+}
+
+.header__list a {
+  font-size: var(--fs-base) !important;
+}
+
+/* Main header */
+/* .header {
+  display: grid !important;
+  align-items: center !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto !important;
+  padding-top: 10px !important;
+  grid-template-areas:
+    "logo button"
+    "menu menu" !important;
+} */
+
+.header__logo {
+  grid-area: logo !important;
+  font-size: var(--fs-md) !important;
+  font-weight: 600;
+}
+
+.header__logo:hover {
+  text-decoration: underline;
+}
+
+/* .header__nav {
+  grid-area: menu !important;
+  display: flex !important;
+  justify-content: center !important;
+} */
+
+/* footer */
+.footer {
+  text-align: center;
+  margin: 3rem;
+}
+
+.article {
+  white-space: pre-wrap;
+}
+.post-article {
+  margin-top: 60px;
+}
+.author {
+  /* margin-top: 10px; */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.author__heading {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.author__body {
+  margin: 5px 0 10px 0;
+}
+
+.article__heading {
+  margin-top: 1rem;
+}
+
+.article-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: clamp(1rem, calc(1.04rem + 0.21vw), 1.25rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.article-list__date {
+  font-size: var(--fs-base);
+  color: var(--gray);
+  width: 240px;
+  display: inline-block;
+  text-align: right;
+}
+
+.article-ul li a {
+  color: var(--black);
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.article-ul li a:hover {
+  text-decoration: underline;
+}
+
+.article-ul li {
+  /* color: var(--black) !important; */
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.article-ul li:not(:last-child) {
+  border-bottom: 1px solid var(--gray);
+}
+
+.pagination {
+  font-size: 1.2rem;
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.pagination:hover {
+  color: var(--black);
+}
+
+/* Search bar  */
+.searchBar {
+  visibility: hidden;
+  transform: translateY(-100px);
+  background-color: var(--black);
+  padding: 4px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.searchBar.open {
+  transform: translateY(0);
+  transition: transform 0.1s;
+}
+
+.searchBar input {
+  margin: 0;
+  padding: 0;
+}
+
+#searchClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--gray-light);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.button {
+  color: var(--black);
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.button:hover {
+  color: var(--gray);
+}
+
+.admin-post {
+  list-style-type: none;
+}
